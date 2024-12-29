@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ cartoon.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="{% url 'home' %}" style="text-decoration: none; color: inherit;">← Back to Gallery</a>
+    </header>
+
+    <!-- Full-Preview Section -->
+    <section id="cartoon-detail">
+        <h1>{{ cartoon.title }}</h1>
+        <img src="{{ cartoon.image.url }}" alt="{{ cartoon.title }}" style="max-width: 100%; height: auto; margin: 20px 0;">
+        <p>{{ cartoon.description }}</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mdogo. All rights reserved.</p>
+    </footer>
+</body>
+</html>

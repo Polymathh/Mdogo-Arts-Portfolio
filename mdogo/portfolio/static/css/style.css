@@ -13,22 +13,89 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 5px;
+    
 }
 
 header h1 {
     margin: 0;
-    color: white;
+    color: #333;
+    font-family: "Rock Salt", serif;
+    font-size: large;
+}
+
+.rock-salt-regular {
+    font-family: "Rock Salt", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+header nav {
+    margin: 0 20px; /* Centers the nav in the container */
+    padding: 0 20px; /* Adds space inside the nav from the edges */
+    display: inline-block; /* Keeps nav compact */
 }
 
 header nav a {
-    margin: 0 10px;
-    color: white;
+	padding: 8px 12px;
+	border: 0;
+    margin: 0 2px;
+    color: #333;
     text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s;
+    margin-left: 20px;
+    border-radius: 15px;
+
+
 }
+
+header nav a:hover {
+    color: #fff;
+    text-decoration: none; 
+}
+
+header nav .auth-button {
+    background-color: #5D4037;
+    font-weight: bold;
+    color: #fff;
+}
+
+header nav .auth-button:hover {
+    background-color: #5D4037;
+    color: #FF9800;
+}
+
+#hero {
+    height: 350px; /* Reduce the section height */
+    padding: 20px; /* Adjust padding inside the section */
+    margin: 10px auto; /* Optional: Adjust margins */
+    text-align: center; /* Center the content */
+    background-color: #FFF8E1; /* Optional: Add a background color */
+}
+
+#hero h2 {
+    font-size: 24px; /* Reduce the heading size */
+}
+
+#hero p {
+    font-size: 16px; /* Reduce the paragraph text size */
+}
+
+#hero img {
+    width: 150px; /* Reduce the image width */
+    max-width: 80%; /* Ensure it’s responsive */
+    border-radius: 50%; /* Keep circular styling */
+}
+
 
 section {
     padding: 20px;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .gallery-grid {
@@ -135,4 +202,17 @@ header a:hover {
 }
 
 
+.admin-button {
+    background-color: #FF9800;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-button:hover {
+    background-color: #E65100;
+    transform: scale(1.1);
+}
 

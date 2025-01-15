@@ -9,10 +9,6 @@
             "src": "/(.*)",
             "dest": "mdogo/wsgi.py"
         }
-    ],
-    "rewrites": [
-          { "source": "/static/(.*)", "destination": "/staticfiles/$1" }
-        ]
-    
+    ]
       
 }

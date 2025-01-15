@@ -9,6 +9,12 @@
             "src": "/(.*)",
             "dest": "mdogo/wsgi.py"
         }
+    ],
+    "rewrites": [
+        {
+        "source": "/media/(.*)",
+        "destination": "/media/$1"
+        }
     ]
       
 }

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -119,19 +120,14 @@ USE_TZ = True
 # settings.py
 
 # URL for static files
+import os
+
 STATIC_URL = '/static/'
-
-# URL for media files (uploads)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = '/media/'
-
-# Directory for media files
-MEDIA_ROOT = BASE_DIR / 'media'
-
-# Directory for static files in development (additional directories)
-STATICFILES_DIRS = [BASE_DIR / 'static']
-
-# Directory for collected static files (for production)
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # Add this line
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+ # Add this line
 
 
 # Default primary key field type

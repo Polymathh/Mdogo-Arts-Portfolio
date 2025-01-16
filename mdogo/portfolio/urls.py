@@ -4,9 +4,12 @@ from django.urls import path
 from . import views
 from .views import logout_view
 
-
 urlpatterns = [
     path('', views.home, name='home'),
     path('cartoon/<int:pk>/', views.cartoon_detail, name='cartoon_detail'),
     path('logout/', logout_view, name='logout'),
 ]
+
+# Serve media files during development
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

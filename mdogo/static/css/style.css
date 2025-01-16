@@ -165,6 +165,49 @@ header a:hover {
     text-decoration: underline;
 }
 
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-toggle .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Hide navigation links on smaller screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        border-radius: 5px;
+    }
+
+    .nav-links a {
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+}
+
 
 #contact {
     background-color: #FFF8E1;

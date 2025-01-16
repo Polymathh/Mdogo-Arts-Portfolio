@@ -14,7 +14,12 @@
 <body>
     <header>
         <h1>Mdogo Cartoons</h1>
-        <nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <nav class="nav-links">
             <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
             {% if user.is_authenticated and user.is_staff %}
